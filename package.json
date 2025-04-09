@@ -1,9 +1,9 @@
 {
-  "name": "vscode-ruby-test-adapter-parallel-rspec",
-  "displayName": "Ruby Test Explorer with parallel_rspec support",
+  "name": "vscode-ruby-test-explorer",
+  "displayName": "Ruby Test Explorer",
   "description": "Run your Ruby tests in the Sidebar of Visual Studio Code",
   "icon": "img/ruby-test-explorer.png",
-  "author": "Connor Shea <connor.james.shea@gmail.com> + lawrence gripper",
+  "author": "Connor Shea <connor.james.shea@gmail.com> + lawrence gripper + Guilherme Caixeta",
   "publisher": "gripdev",
   "version": "0.9.5",
   "license": "MIT",
@@ -152,6 +152,16 @@
             "type": "string"
           },
           "scope": "resource"
+        },
+        "rubyTestExplorer.debuggerType": {
+          "markdownDescription": "The debugger type.",
+          "default": "ruby_lsp",
+          "type": "string",
+          "scope": "resource",
+          "enum": [
+            "ruby_lsp",
+            "rdbg"
+          ]
         },
         "rubyTestExplorer.debuggerHost": {
           "markdownDescription": "The host to connect the debugger to.",

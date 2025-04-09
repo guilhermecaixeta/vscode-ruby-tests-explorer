@@ -76,7 +76,7 @@ export class RubyAdapter implements TestAdapter {
 
     const debuggerConfig = {
       name: "Debug Ruby Tests",
-      type: "Ruby",
+      type: config.get<string>('debuggerType') || "ruby_lsp",
       request: "attach",
       remoteHost: config.get('debuggerHost') || "127.0.0.1",
       remotePort: config.get('debuggerPort') || "1234",
